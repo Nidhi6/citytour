@@ -16,11 +16,9 @@ var commentRoutes    = require("./routes/comments"),
     cityRoutes = require("./routes/cities"),
     indexRoutes      = require("./routes/index")
   
-  var url =  process.env.DATABASEURL || "mongodb://localhost/city_camp_v10"
-//console.log(process.env.DATABASEURL);   
-//mongoose.connect("mongodb://localhost/city_camp_v10");
-//mongoose.connect("mongodb://nidhi:nidhi6@ds149960.mlab.com:49960/citytour");
-mongoose.connect(url);
+
+mongoose.connect("mongodb://nidhi:nidhi6@ds149960.mlab.com:49960/citytour");
+
 //process.env.databaseURL
 
 app.use(bodyParser.urlencoded({extended: true}));
