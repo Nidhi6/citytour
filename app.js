@@ -16,8 +16,11 @@ var commentRoutes    = require("./routes/comments"),
     cityRoutes = require("./routes/cities"),
     indexRoutes      = require("./routes/index")
     
-// mongoose.connect("mongodb://localhost/city_camp_v10");
-mongoose.connect("mongodb://nidhi:nidhi6@ds149960.mlab.com:49960/citytour");
+//console.log(process.env.DATABASEURL);   
+//mongoose.connect("mongodb://localhost/city_camp_v10");
+//mongoose.connect("mongodb://nidhi:nidhi6@ds149960.mlab.com:49960/citytour");
+mongoose.connect(process.env.DATABASEURL);
+//process.env.databaseURL
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
